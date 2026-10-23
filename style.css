@@ -1,0 +1,48 @@
+:root{--bg:#eef1f4;--panel:#fff;--ink:#14213d;--mute:#5b6678;--line:#d5dbe3;--gold:#b9801a;--ok:#2e6b4f;--okbg:#e2f0e8;--hl:#fff6df;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1524;--panel:#182036;--ink:#e8ecf4;--mute:#9aa6bd;--line:#2b3550;--gold:#e0a93f;--ok:#6fc79a;--okbg:#1b3329;--hl:#2d2814;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1524;--panel:#182036;--ink:#e8ecf4;--mute:#9aa6bd;--line:#2b3550;--gold:#e0a93f;--ok:#6fc79a;--okbg:#1b3329;--hl:#2d2814;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 "Instrument Sans",system-ui,sans-serif}
+main{max-width:760px;margin:0 auto;padding:24px 16px 64px}
+h1{font:700 clamp(30px,7vw,44px)/1.1 Literata,Georgia,serif;margin:0 0 6px;letter-spacing:-.01em}
+.sub{color:var(--mute);margin:0 0 20px}
+.top{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+@media(max-width:520px){.top{grid-template-columns:1fr}}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px}
+.big{font:700 34px/1 Literata,Georgia,serif}
+.bar{height:10px;background:var(--line);border-radius:5px;overflow:hidden;margin:10px 0 6px}
+.bar i{display:block;height:100%;background:var(--gold);width:0;transition:width .4s}
+.stat{color:var(--mute);font-size:14px}
+label{font-size:14px;color:var(--mute);display:block;margin-bottom:4px}
+input[type=number],input[type=date],textarea{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:7px 9px;width:100%}
+.cfg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.msg{background:var(--hl);border:1px solid var(--gold);border-radius:10px;padding:12px 14px;margin-bottom:16px;font-size:15px}
+.tabs{display:flex;gap:6px;margin:8px 0 14px;border-bottom:1px solid var(--line)}
+.tabs button{font:600 15px inherit;font-family:inherit;background:none;border:0;border-bottom:3px solid transparent;padding:10px 14px;color:var(--mute);cursor:pointer}
+.tabs button[aria-selected=true]{color:var(--ink);border-bottom-color:var(--gold)}
+button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.day{background:var(--panel);border:1px solid var(--line);border-radius:10px;margin-bottom:8px;padding:12px 14px}
+.day.done{background:var(--okbg);border-color:var(--ok)}
+.day.today{border-color:var(--gold);border-width:2px}
+.row{display:flex;gap:12px;align-items:flex-start}
+.row input[type=checkbox]{width:22px;height:22px;margin-top:3px;accent-color:var(--ok);flex:none}
+.dn{font:700 18px Literata,Georgia,serif}
+.tag{font-size:12px;color:var(--gold);font-weight:600;margin-left:6px}
+.segs{margin:2px 0;font-weight:500}
+.meta{font-size:13px;color:var(--mute)}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:14px;color:var(--mute)}
+textarea{margin-top:6px;min-height:70px;resize:vertical}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.chips button{font:500 14px inherit;font-family:inherit;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:6px 12px;cursor:pointer}
+.chips button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.cat{font:700 18px Literata,Georgia,serif;margin:18px 0 6px}
+.book{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:9px 0;border-bottom:1px solid var(--line)}
+.book .meta{grid-column:1}
+.book .cnt{grid-row:1;grid-column:2;font-weight:600;text-align:right}
+.book .mini{grid-column:1/3;height:5px;background:var(--line);border-radius:3px;overflow:hidden}
+.book .mini i{display:block;height:100%;background:var(--ok)}
+.rst{margin-top:28px;font-size:13px;color:var(--mute)}
+.rst button{font:inherit;color:var(--mute);background:none;border:1px solid var(--line);border-radius:6px;padding:5px 10px;cursor:pointer}

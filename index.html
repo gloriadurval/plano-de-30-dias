@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bíblia em 30 dias</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Bíblia em 30 dias</h1>
+<p class="sub">Leitura em ordem canônica, dividida em 30 dias de tamanho parecido.</p>
+<section class="top">
+  <div class="box"><div class="big" id="pct">0%</div><div class="bar"><i id="fill"></i></div><div class="stat" id="stat"></div></div>
+  <div class="box cfg">
+    <div><label for="start">Início</label><input type="date" id="start"></div>
+    <div><label for="pages">Páginas da sua Bíblia</label><input type="number" id="pages" min="300" max="4000" value="1300"></div>
+  </div>
+</section>
+<div id="pace"></div>
+<div class="tabs" role="tablist">
+  <button role="tab" id="t1" aria-selected="true">Plano diário</button>
+  <button role="tab" id="t2" aria-selected="false">Livros</button>
+</div>
+<section id="plan"></section>
+<section id="books" hidden></section>
+<p class="rst"><button id="reset">Apagar progresso e anotações</button></p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
